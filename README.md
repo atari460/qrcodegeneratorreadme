@@ -1,7 +1,5 @@
 This API will encodes your data into a QR code. You can pass any url or string into the "data" param. The "data" param is the only required field.
 
-Both GET and POST endpoints are available and work exactly the same. Let's look at some examples using GET
-
 ## Simple Example:
 GET https://simple-qr-code-generator-cheap-and-efficient.p.rapidapi.com/api/v1/?data=https://google.com
 This will return a black and white QR code in png image format. Scanning the QR code will take the user to https://google.com
@@ -34,15 +32,3 @@ This will return a black and white QR code in png image format. Scanning the QR 
 GET https://simple-qr-code-generator-cheap-and-efficient.p.rapidapi.com/api/v1/?data=https://google.com&response-type=dataurl&file-type=svg&scale=15&color=blue&bg-color=white
 
 This will return a dataurl for a QR code in svg format that is blue and white. Scanning the QR code will take the user to https://google.com
-
-Similarly, you can instead send a POST request to the same URL with the body structured like:
-```
-{
-    "data":"https://google.com",
-    "response-type":"dataurl",
-    "file-type":"svg",
-    "scale":"15",
-    "color":"blue",
-    "bg-color": "white"
-}
-```
